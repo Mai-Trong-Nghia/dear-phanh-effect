@@ -1,5 +1,3 @@
-index.html:
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,6 +6,29 @@ index.html:
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dear Love</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    @keyframes dropFade {
+      0% {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    #message {
+      animation: dropFade 1.5s ease-out;
+      white-space: pre-line;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 24px;
+      color: #ff00cc;
+      text-shadow: 0 0 5px #ff00cc, 0 0 10px #ff00cc;
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 
 <body>
