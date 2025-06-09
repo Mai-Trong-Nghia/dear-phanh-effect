@@ -6,40 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dear Love</title>
   <link rel="stylesheet" href="styles.css">
-  <style>
-    @keyframes dropFade {
-      0% {
-        opacity: 0;
-        transform: translateY(-50px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    #message {
-      animation: dropFade 1.5s ease-out;
-      white-space: pre-line;
-      font-family: 'Courier New', Courier, monospace;
-      font-size: 24px;
-      color: #ff00cc;
-      text-shadow: 0 0 5px #ff00cc, 0 0 10px #ff00cc;
-      text-align: center;
-      margin-top: 20px;
-    }
-  </style>
 </head>
 
 <body>
   <div class="background-glow"></div>
   <div class="container">
     <div class="image-gallery">
-      <img src="z6687331626326_5d82c7efc3d427866e83396c068a471d.jpg" alt="Love Image 1" class="gallery-image sparkle slide-in">
-      <img src="z6687331645203_1e43d58efb05e5652199da25282f0077.jpg" alt="Love Image 2" class="gallery-image sparkle slide-in delay-1">
-      <img src="z6687331661102_92d67e5e9b5f42d3d8e3b3718aca352f.jpg" alt="Love Image 3" class="gallery-image sparkle slide-in delay-2">
+      <img src="4.jpg" alt="4.jpg" class="gallery-image drop-in delay-0">
+      <img src="5.jpg alt="5.jpg" class="gallery-image drop-in delay-1">
+      <img src="6.jpg" alt="6.jpg" class="gallery-image drop-in delay-2">
     </div>
-    <h1 id="message"></h1>
+    <div id="message"></div>
   </div>
 
   <audio autoplay loop>
@@ -47,20 +24,6 @@
   </audio>
 
   <script src="script.js"></script>
-  <script>
-    const message = `Anh yêu em\nCảm ơn em đã đến bên anh\nQuan tâm chăm sóc và làm một ngày của anh thật đẹp\nYêu Phanh ❤️`;
-    document.getElementById('message').innerText = message;
-
-    function createHeart() {
-      const heart = document.createElement('div');
-      heart.className = 'heart';
-      heart.style.left = Math.random() * 100 + 'vw';
-      heart.style.animationDuration = (Math.random() * 3 + 2) + 's';
-      document.body.appendChild(heart);
-      setTimeout(() => heart.remove(), 5000);
-    }
-    setInterval(createHeart, 300);
-  </script>
 </body>
 
 </html>
