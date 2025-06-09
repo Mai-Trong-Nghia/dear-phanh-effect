@@ -14,20 +14,32 @@ index.html:
   <div class="background-glow"></div>
   <div class="container">
     <div class="image-gallery">
-      <img src="z6687331626326_5d82c7efc3d427866e83396c068a471d" class="gallery-image sparkle">
-      <img src="z6687331645203_1e43d58efb05e5652199da25282f0077" class="gallery-image sparkle">
-      <img src="z6687331661102_92d67e5e9b5f42d3d8e3b3718aca352f" class="gallery-image sparkle">
-      <img src="image4.jpg" alt="Love Image 4" class="gallery-image sparkle">
-      <img src="image5.jpg" alt="Love Image 5" class="gallery-image sparkle">
+      <img src="z6687331626326_5d82c7efc3d427866e83396c068a471d.jpg" alt="Love Image 1" class="gallery-image sparkle slide-in">
+      <img src="z6687331645203_1e43d58efb05e5652199da25282f0077.jpg" alt="Love Image 2" class="gallery-image sparkle slide-in delay-1">
+      <img src="z6687331661102_92d67e5e9b5f42d3d8e3b3718aca352f.jpg" alt="Love Image 3" class="gallery-image sparkle slide-in delay-2">
     </div>
     <h1 id="message"></h1>
   </div>
 
   <audio autoplay loop>
-    <source src="SSStik.net-Ph__p_m__u___Ost_____n_c___g______-_MAYDAYs__Minh_T___c__phepmau__nhachay__xuhuong__nhachaymoingay__" type="audio/mpeg">
+    <source src="your-music-url.mp3" type="audio/mpeg">
   </audio>
 
   <script src="script.js"></script>
+  <script>
+    const message = `Anh yêu em\nCảm ơn em đã đến bên anh\nQuan tâm chăm sóc và làm một ngày của anh thật đẹp\nYêu Phanh ❤️`;
+    document.getElementById('message').innerText = message;
+
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = (Math.random() * 3 + 2) + 's';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 5000);
+    }
+    setInterval(createHeart, 300);
+  </script>
 </body>
 
 </html>
